@@ -1,4 +1,57 @@
+<!-- Add styles directly in the head -->
+<head>
+  <style>
+    /* Site Title */
+    .site-title {
+      font-size: 3rem; /* equivalent to 5xl */
+      font-weight: 800; /* bold, extrabold */
+      color: #6d65ff; /* indigo color */
+      text-decoration: none; /* Remove underline */
+      transition: all 0.3s ease-in-out; /* smooth transition */
+    }
+
+    .site-title:hover {
+      color: #1de4d3; /* darken indigo on hover */
+      
+    }
+    
+    
+
+    /* Navigation */
+    .nav-list {
+      display: flex;
+      list-style-type: none;
+      margin-top: 1.5rem; /* 6 space */
+      padding: 0;
+    }
+
+    .nav-list li {
+      margin-right: 2rem; /* space between items */
+    }
+
+    .nav-list a {
+      font-size: 1.125rem; /* large text size */
+      font-weight: 500; /* medium weight */
+      color: #ffffff; /* dark gray color */
+      text-decoration: none; /* remove underline */
+    }
+
+    .nav-list a:hover {
+      color: #069441; /* darken gray on hover */
+    }
+  </style>
+</head>
+
+<!-- Title -->
 <a href="{{ "" | relURL }}" class="title">
-  <h2>{{ .Site.Title }}</h2>
+  <h2 class="site-title">{{ .Site.Title }}</h2>
 </a>
-<nav>{{- partial "nav.html" . -}}</nav>
+
+<!-- Navigation -->
+<nav>
+  <ul class="nav-list">
+    {{- partial "nav.html" . -}}
+  </ul>
+  
+  
+</nav>
